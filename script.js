@@ -80,8 +80,8 @@ let text=document.querySelector('.text');
 // //     secondgbp.classList.add('pressbtn2');
 // // });
 
-let ffff='RUB';
-let ssss='USD';
+let buttonFirst='RUB';
+let buttonSecond='USD';
 
 
 btn1.forEach(button => {
@@ -89,8 +89,8 @@ btn1.forEach(button => {
         btn1.forEach(btn =>
             btn.classList.remove("pressbtn1"));
         button.classList.add("pressbtn1");
-        ffff=button.textContent;
-        updateCurrency(ffff,ssss);
+        buttonFirst=button.textContent;
+        updateCurrency(buttonFirst,buttonSecond);
         wifi();
     });
 });
@@ -101,8 +101,8 @@ btn2.forEach(button => {
             btn.classList.remove("pressbtn2")
         );
         button.classList.add("pressbtn2");
-        ssss=button.textContent;
-        updateCurrency(ffff,ssss);
+        buttonSecond=button.textContent;
+        updateCurrency(buttonFirst,buttonSecond);
         wifi();
     }); 
 });
@@ -128,15 +128,15 @@ function updateCurrency(currency1,currency2) {
            
             })
             error.classList.add('none');  
-            }updateCurrency(ffff,ssss);
+            }updateCurrency(buttonFirst,buttonSecond);
             firstinp.addEventListener('input',()=>{
                 a=1;
-                updateCurrency(ffff,ssss);
+                updateCurrency(buttonFirst,buttonSecond);
                 numberOfZero(firstinp);
             })
             secondinp.addEventListener('input',()=>{
                 a=2;
-                updateCurrency(ffff,ssss);
+                updateCurrency(buttonFirst,buttonSecond);
                 numberOfZero(secondinp);
             })
 function numberDots(input) { 
@@ -164,14 +164,14 @@ input.addEventListener('input', () =>{
 function wifi() {
     while (!navigator.onLine) {
         error.classList.remove('none');
-        if (ffff == ssss){
+        if (buttonFirst == buttonSecond){
             if (a == 1){
                 secondinp.value = firstinp.value;
                 console.log('AAAA');
             }else if(a == 2){
                 firstinp.value = secondinp.value
             }break;
-        }else if(ffff != ssss){
+        }else if(buttonFirst != buttonSecond){
             if(a == 1){
             secondinp.value = "";
         }
@@ -184,14 +184,14 @@ function wifi() {
     while (navigator.onLine) {
         if (error.className != "none") {
             error.classList.add('none');
-            updateCurrency(ffff,ssss);
+            updateCurrency(buttonFirst,buttonSecond);
         }
         break;
     }
     
 }
 window.addEventListener('online', ()=>{
-    updateCurrency(ffff,ssss);
+    updateCurrency(buttonFirst,buttonSecond);
     
 });
 window.addEventListener('offline', ()=>{
