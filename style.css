@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-family: "Roboto", serif;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 header{
     background-color: #F5F5F6;
 }
 .heading{
     display: flex;
-    height: 50px;
     align-items: center;
-    gap: 67px;
-    /* justify-content: space-around; */
+    height: 55px;
+    /* gap: 110px; */
+    justify-content: space-evenly;
 }
 .texts{
     display: flex;
-    gap: 30px;
-    font-size: 12px;
+    gap: 40px;
+    font-size: 13px;
     font-weight: 500;
     letter-spacing: 1px;
 }
@@ -26,12 +28,12 @@ header{
     color: #959BA4;
 }
 .bank{
-    margin-left: 108px;
+    /* margin-left: 40px; */
     width: 100px;
 }
 .login{
-    margin-left: 49px;
-    font-size: 12px;
+    margin-left: 20px;
+    font-size: 13px;
     font-weight: 500;
     display: flex;
     justify-content: center;
@@ -39,56 +41,65 @@ header{
     width: 70px;
     height: 35px;
     border-radius: 3px;
+    /* margin-right: 30px; */
     background-color: white;
+} 
+.hide{
+    display: none;
+}
+.text{
+    display: none;
 }
 .alll{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 110px;
-    margin-left: -17px;
+    margin-top: 90px;
+    margin-left: -69px;
 }
 .all{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    /* gap: 20px; */
+    /* justify-content: baseline; */
 }
 .both{
     display: flex;
     flex-direction: row;
     gap: 150px;
-}
+    margin-left: 2px;
+    /* justify-content: baseline; */
+} 
 h1{
-    font-size: 45px;
-}
-input{
-    width: 280px;
-    height: 110px;
+    font-size: 50px;
+    margin-bottom: 15px;
 }
 .pinps{
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.2px;
     color: #959BA4;
     margin-bottom: 7px;
+    /* margin-left: 2px; */
 }
 .vals{
     border: 1px solid #E5E5E5;
-    height: 35px;
+    height: 33px;
     border-radius: 4px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     display: flex;
+    gap: 0px;
 }
 .val{
     height: 34.7px;
     margin-top: -0.5px;
-    width: 71px;
+    width: 72px;
     border: 1px solid #e5e5e5;
     background-color: white;
     color: #C6c6c6;
 }
 .val1{
     height: 34.7px;
-    width: 69.7px;
+    width: 72px;
     margin-top: -0.5px;
     border: 1px solid #e5e5e5;
     border-radius: 4px 0px 0px 4px;
@@ -97,26 +108,29 @@ input{
 }
 .val4{
     height: 34.7px;
-    width: 69.7px;
+    width: 72px;
     margin-top: -0.5px;
     border: 1px solid #e5e5e5;
     border-radius: 0px 4px 4px 0px;
     background-color: white;
     color: #C6c6c6;
 }
-.pressbtn{
+.pressbtn1{
     background-color: #833AE0;
     color: white;
     border: 1px solid #833AE0;
 }
-main{
-    margin-bottom: 100px; 
-    /* poka cto */
+.pressbtn2{
+    background-color: #833AE0;
+    color: white;
+    border: 1px solid #833AE0;
 }
 .capture{
     border: 1.5px solid #e5e5e5;
     border-radius: 3px;
     height: 130px;
+    width: 284.5px;
+    margin-bottom: 40px;
 }
 input:focus{
     outline: none;
@@ -124,12 +138,84 @@ input:focus{
 input{
     border: none;
     font-size: 35px;
+    height: 90px;
+    font-weight: 600;
+    padding-left: 10px;
+    width: 260px;
+    /* margin-left: 10px; */
 }
-input::-webkit-inner-spin-button, 
-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+.firstval{
+    color: #C6C6C6;
+    font-size: 14px;
+    /* margin-bottom: 15px; */
+    margin-left: 13px;
+    margin-top: 3px;
 }
-/* вроде пока none не понадобился! 
+.secondval{
+    color: #C6C6C6;
+    font-size: 14px;
+    /* margin-bottom: 12px; */
+    margin-left: 13px;
+    margin-top: 3px;
+}
+.error{
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    color:brown;
+    /* margin-top: 100px; */
+}
+main{
+    margin-bottom: 100px; 
+    /* poka cto */
+} 
+.menu{
+    display: none;
+}
+.none{
+    display: none !important;
+}
+.capture{
+    border: 1.5px solid #e5e5e5;
+    border-radius: 3px;
+    height: 120px;
+}
+input:focus{
+    outline: none;
+}
+input{
+    border: none;
+    font-size: 35px;
+    height: 90px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+.firstval{
+    color: #C6C6C6;
+    font-size: 13px;
+    margin-bottom: 12px;
+    margin-left: 13px;
+}
+.secondval{
+    color: #C6C6C6;
+    font-size: 13px;
+    margin-bottom: 12px;
+    margin-left: 13px;
+}
+.error{
+    display: block;
+}
+.none{
+    display: none !important;
+}
+.error{
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    color:brown;
+    margin-top: -20px;
+} 
+/* вроде пока none не понадобился 
 каждый раз чтобы кнопку нажимать могу сразу pressbtn переводить
 вконце убрать main margin
 оказывается надо из сайта брать эти рубли доллары с помощью фетч вроде( можно сразу создать элемент в джава)
@@ -137,3 +223,626 @@ input::-webkit-outer-spin-button {
 и заняться чтобы все превращалось в точку+ после точки 5 цифр
 Спокойной ночи
  */
+ @media screen and (min-width: 992px) and (max-width:1279px) {
+    .heading{
+        display: flex;
+        align-items: center;
+        height: 48px;
+        /* gap: 110px; */
+        justify-content: space-evenly;
+    }
+    .menu{
+        display: none;
+    }
+    .texts{
+        display: flex;
+        gap: 32px;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .bank{
+        /* margin-left: 40px; */
+        width: 85px;
+    }
+    .login{
+        margin-left: 13px;
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 65px;
+        height: 33px;
+        border-radius: 3px;
+        /* margin-right: 30px; */
+        background-color: white;
+    } 
+    .hide{
+        display: none;
+    }
+    .text{
+        display: none;
+    }
+    .alll{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 90px;
+        margin-left: -18px;
+    }
+    .both{
+        display: flex;
+        flex-direction: row;
+        gap: 110px;
+        margin-left: 2px;
+        /* justify-content: baseline; */
+    } 
+    h1{
+        font-size: 43px;
+        margin-bottom: 15px;
+    }
+    .pinps{
+        font-size: 12.5px;
+        letter-spacing: 0.2px;
+        color: #959BA4;
+        margin-bottom: 5px;
+        /* margin-left: 2px; */
+    }
+    .vals{
+        border: 1px solid #E5E5E5;
+        height: 32px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        display: flex;
+        gap: 0px;
+    }
+    .val{
+        height: 33.5px;
+        margin-top: -0.5px;
+        width: 68px;
+        border: 1px solid #e5e5e5;
+        background-color: white;
+        color: #C6c6c6;
+    }
+    .val1{
+        height: 33.5px;
+        width: 68px;
+        margin-top: -0.5px;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px 0px 0px 4px;
+        background-color: white;
+        color: #C6c6c6;
+    }
+    .val4{
+        height: 33.5px;
+        width: 68px;
+        margin-top: -0.5px;
+        border: 1px solid #e5e5e5;
+        border-radius: 0px 4px 4px 0px;
+        background-color: white;
+        color: #C6c6c6;
+    }
+    .pressbtn1{
+        background-color: #833AE0;
+        color: white;
+        border: 1px solid #833AE0;
+    }
+    .pressbtn2{
+        background-color: #833AE0;
+        color: white;
+        border: 1px solid #833AE0;
+    }
+    .capture{
+        border: 1.5px solid #e5e5e5;
+        border-radius: 3px;
+        height: 125px;
+        width: 270px;
+    }
+    input:focus{
+        outline: none;
+    }
+    input{
+        border: none;
+        font-size: 33px;
+        height: 90px;
+        font-weight: 600;
+        padding-left: 10px;
+        width: 250px;
+        /* margin-left: 10px; */
+    }
+    .firstval{
+        color: #C6C6C6;
+        font-size: 12px;
+        margin-bottom: 8px;
+        margin-left: 13px;
+        margin-top: 9px;
+    }
+    .secondval{
+        color: #C6C6C6;
+        font-size: 12px;
+        margin-bottom: 8px;
+        margin-left: 13px;
+        margin-top: 9px;
+    }
+    .error{
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        color:brown;
+        margin-top: 20px;
+    }
+ }
+ @media screen and (min-width: 763px) and (max-width:992px){
+    .heading{
+        display: flex;
+        align-items: center;
+        height: 45px;
+        /* gap: 110px; */
+        justify-content: space-evenly;
+    }
+    .menu{
+        display: none;
+    }
+    .texts{
+        display: flex;
+        gap: 16px;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .bank{
+        /* margin-left: 40px; */
+        width: 78px;
+    }
+    .login{
+        margin-left: 11px;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 28px;
+        border-radius: 3px;
+        /* margin-right: 30px; */
+        background-color: white;
+    } 
+    .text{
+        display: none;
+    }
+    .alll{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        margin-left: 96px;
+    }
+    .both{
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        margin-left: 2px;
+        /* justify-content: baseline; */
+    } 
+    h1{
+        font-size: 34px;
+        margin-bottom: 14px;
+    }
+    .pinps{
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        color: #959BA4;
+        margin-bottom: 5px;
+        /* margin-left: 2px; */
+    }
+    .vals{
+        border: 1px solid #E5E5E5;
+        height: 30px;
+        border-radius: 4px;
+        /* margin-bottom: 16px; */
+        display: flex;
+        gap: 0px;
+    }
+    .val{
+        height: 31px;
+        margin-top: -0.5px;
+        width: 64.2px;
+        border: 1px solid #e5e5e5;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 12px;
+    }
+    .val1{
+        height: 31px;
+        width: 64.2px;
+        margin-top: -0.5px;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px 0px 0px 4px;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 12px;
+    }
+    .val4{
+        height: 31px;
+        width: 64.2px;
+        margin-top: -0.5px;
+        border: 1px solid #e5e5e5;
+        border-radius: 0px 4px 4px 0px;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 12px;
+    }
+    .pressbtn1{
+        background-color: #833AE0;
+        color: white;
+        border: 1px solid #833AE0;
+    }
+    .pressbtn2{
+        background-color: #833AE0;
+        color: white;
+        border: 1px solid #833AE0;
+    }
+    .capture{
+        border: 1.5px solid #e5e5e5;
+        border-radius: 3px;
+        height: 125px;
+        width: 255px;
+    }
+    input:focus{
+        outline: none;
+    }
+    input{
+        border: none;
+        font-size: 31px;
+        height: 90px;
+        font-weight: 600;
+        padding-left: 8px;
+        width: 240px;
+        /* margin-left: 10px; */
+    }
+    .firstval{
+        color: #C6C6C6;
+        font-size: 11px;
+        margin-bottom: 8px;
+        margin-left: 13px;
+        margin-top: 10px;
+    }
+    .secondval{
+        color: #C6C6C6;
+        font-size: 11px;
+        margin-bottom: 8px;
+        margin-left: 13px;
+        margin-top: 10px;
+    }
+    .error{
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        color:brown;
+        margin-top: 20px;
+    }
+ }
+ @media screen and (min-width: 592px) and (max-width:763px){
+    .heading{
+        display: flex;
+        align-items: center;
+        height: 40px;
+        /* gap: 110px; */
+        justify-content: space-evenly;
+    }
+    .menu{
+        display: block;
+        width: 20px;
+    }
+    .texts{
+        display: none;
+        gap: 12px;
+        font-size: 8px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .text{
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -70px;
+    }
+    .tt{
+        margin-bottom: 1px;
+    }
+    .hide{
+        display: none;
+    }
+    .bank{
+        /* margin-left: 40px; */
+        width: 74px;
+    }
+    .login{
+        margin-left: 13px;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 28px;
+        border-radius: 3px;
+        /* margin-right: 30px; */
+        background-color: white;
+    } 
+    .alll{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        margin-left: 5px;
+    }
+    .both{
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        margin-left: 2px;
+        /* justify-content: baseline; */
+    } 
+    h1{
+        font-size: 30px;
+        margin-bottom: 11px;
+    }
+    .pinps{
+        font-size: 11.5px;
+        letter-spacing: 0.2px;
+        color: #959BA4;
+        margin-bottom: 5px;
+        /* margin-left: 2px; */
+    }
+    .vals{
+        border: 1px solid #E5E5E5;
+        height: 28px;
+        border-radius: 4px;
+        /* margin-bottom: 16px; */
+        display: flex;
+        gap: 0px;
+    }
+    .val{
+        height: 29.5px;
+        margin-top: -1px;
+        width: 61px;
+        border: 1px solid #e5e5e5;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 11px;
+    }
+    .val1{
+        height: 29.5px;
+        width: 61px;
+        margin-top: -1px;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px 0px 0px 4px;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 11px;
+    }
+    .val4{
+        height: 29.5px;
+        width: 61px;
+        margin-top: -1px;
+        border: 1px solid #e5e5e5;
+        border-radius: 0px 4px 4px 0px;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 11px;
+    }
+    .pressbtn1{
+        background-color: #833AE0;
+        color: white;
+        border: 1px solid #833AE0;
+    }
+    .pressbtn2{
+        background-color: #833AE0;
+        color: white;
+        border: 1px solid #833AE0;
+    }
+    .capture{
+        border: 1.5px solid #e5e5e5;
+        border-radius: 3px;
+        height: 125px;
+        width: 242.5px;
+    }
+    input:focus{
+        outline: none;
+    }
+    input{
+        border: none;
+        font-size: 31px;
+        height: 90px;
+        font-weight: 600;
+        padding-left: 8px;
+        width: 220px;
+        /* margin-left: 10px; */
+    }
+    .firstval{
+        color: #C6C6C6;
+        font-size: 11px;
+        margin-bottom: 6px;
+        margin-left: 11px;
+        margin-top: 10px;
+    }
+    .secondval{
+        color: #C6C6C6;
+        font-size: 11px;
+        margin-bottom: 6px;
+        margin-left: 11px;
+        margin-top: 10px;
+    }
+    .error{
+        display: flex;
+        justify-content: center;
+        font-size: 19px;
+        color:brown;
+        margin-top: 40px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width:592px){
+    .heading{
+        display: flex;
+        align-items: center;
+        height: 45px;
+        /* gap: 110px; */
+        justify-content: space-evenly;
+    }
+    .menu{
+        display: block;
+        width: 21px;
+    }
+    .texts{
+        display: none;
+        gap: 12px;
+        font-size: 8px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .text{
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -70px;
+    }
+    .tt{
+        margin-bottom: -2px;
+    }
+    .hide{
+        display: none;
+    }
+    .bank{
+        /* margin-left: 40px; */
+        width: 74px;
+    }
+    .login{
+        margin-left: 13px;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 58px;
+        height: 26px;
+        border-radius: 3px;
+        /* margin-right: 30px; */
+        background-color: white;
+    } 
+    .alll{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70px;
+        margin-left: 5px;
+    }
+    .both{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 2px;
+        /* justify-content: baseline; */
+    } 
+    h1{
+        width: 245px;
+        font-size: 30px;
+        margin-bottom: 9px;
+    }
+    .pinps{
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        color: #959BA4;
+        margin-bottom: 5px;
+        /* margin-left: 2px; */
+    }
+    .vals{
+        border: 1px solid #E5E5E5;
+        height: 31px;
+        border-radius: 4px;
+        /* margin-bottom: 16px; */
+        display: flex;
+        gap: 0px;
+    }
+    .val{
+        height: 32px;
+        margin-top: -0.7px;
+        width: 67px;
+        border: 1px solid #e5e5e5;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 12px;
+    }
+    .val1{
+        height: 32px;
+        width: 67px;
+        margin-top: -0.7px;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px 0px 0px 4px;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 12px;
+    }
+    .val4{
+        height: 32px;
+        width: 67px;
+        margin-top: -0.7px;
+        border: 1px solid #e5e5e5;
+        border-radius: 0px 4px 4px 0px;
+        background-color: white;
+        color: #C6c6c6;
+        font-size: 12px;
+    }
+    .pressbtn1{
+        background-color: #833AE0;
+        color: white;
+        border: 1px solid #833AE0;
+    }
+    .pressbtn2{
+        background-color: #833AE0;
+        color: white;
+        border: 1px solid #833AE0;
+    }
+    .capture{
+        border: 1.5px solid #e5e5e5;
+        border-radius: 3px;
+        height: 125px;
+        width: 266px;
+    }
+    input:focus{
+        outline: none;
+    }
+    input{
+        border: none;
+        font-size: 31px;
+        height: 90px;
+        font-weight: 600;
+        padding-left: 8px;
+        width: 250px;
+        /* margin-left: 10px; */
+    }
+    .firstval{
+        color: #C6C6C6;
+        font-size: 11.5px;
+        margin-bottom: 6px;
+        margin-left: 11px;
+        margin-top: 10px;
+    }
+    .secondval{
+        color: #C6C6C6;
+        font-size: 11.5px;
+        margin-bottom: 6px;
+        margin-left: 11px;
+        margin-top: 10px;
+    }
+    .error{
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        color:brown;
+        margin-top: 40px;
+    }
+ }
