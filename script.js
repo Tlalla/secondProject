@@ -165,6 +165,8 @@ function wifi() {
     while (!navigator.onLine) {
         error.classList.remove('none');
         if (buttonFirst == buttonSecond){
+            firstval.textContent=`1 ${buttonFirst} = 1 ${buttonSecond}`
+            secondval.textContent=`1 ${buttonSecond} = 1 ${buttonFirst}`
             if (a == 1){
                 secondinp.value = firstinp.value;
                 console.log('AAAA');
